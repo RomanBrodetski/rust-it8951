@@ -20,7 +20,7 @@ fn main() -> anyhow::Result<()> {
     println!("version: {}", system_info.version);
 
     println!("Display data");
-    let img = image::open("puppy.png")?;
+    let img = image::open("puppy.jpg")?;
     let grayscale_image = img.grayscale();
     // img.resize(1872,1404, FilterType::Gaussian);
 
