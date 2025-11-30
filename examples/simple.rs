@@ -24,7 +24,6 @@ fn main() -> anyhow::Result<()> {
     let grayscale_image = img.grayscale();
     // img.resize(1872,1404, FilterType::Gaussian);
 
-    // it8951.update_region(&system_info, &[], 0, 0, 0).unwrap();
 
     // 0 INIT: works - whole screen blanks
     // 1 DU:
@@ -35,7 +34,7 @@ fn main() -> anyhow::Result<()> {
     // 6: DU4: 4 gray times
     // 7: A2: 2 bit pictures
 
-    it8951.update_region(&grayscale_image, 0, 0, Mode::GC16)?;
+    it8951.update_region(&grayscale_image, 0, 0, Mode::A2)?;
     println!("End");
     Ok(())
 }
