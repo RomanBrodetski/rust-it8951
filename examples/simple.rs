@@ -1,6 +1,7 @@
 use rust_it8951::{It8951, Mode};
 use std::thread;
 use std::time::Duration;
+use image::imageops::FilterType;
 
 fn main() -> anyhow::Result<()> {
     println!("Start");
@@ -21,6 +22,7 @@ fn main() -> anyhow::Result<()> {
     println!("Display data");
     let img = image::open("kitten.jpg")?;
     let grayscale_image = img.grayscale();
+    // img.resize(1872,1404, FilterType::Gaussian);
 
     // it8951.update_region(&system_info, &[], 0, 0, 0).unwrap();
 
