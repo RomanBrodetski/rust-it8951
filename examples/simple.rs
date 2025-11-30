@@ -34,7 +34,7 @@ fn main() -> anyhow::Result<()> {
     // 6: DU4: 4 gray times
     // 7: A2: 2 bit pictures
 
-    it8951.update_region(&grayscale_image, 0, 0, Mode::GC16)?;
+    it8951.update_region(&grayscale_image, 0, 0, Mode::INIT)?;
     println!("End");
     Ok(())
 }
